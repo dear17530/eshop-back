@@ -16,7 +16,7 @@ const app = express()
 
 app.use(cors({
   origin (origin, callback) {
-    if (process.env.DEV === 'false') {
+    if (process.env.DEV === 'true') {
       callback(null, true)
     } else {
       if (origin !== undefined && origin.includes('github')) {
